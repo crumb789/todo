@@ -6,7 +6,7 @@
             </div>
             <div class="alert-btn">
                 <my-button class="btn-yes" @click="$emit('qust-delete')">
-                    Да(
+                    Да :)
                 </my-button>
                 <my-button class="btn-no" @click="$emit('qust-close')">
                     Нет
@@ -54,5 +54,19 @@ export default {
     z-index: 10;
     justify-content: space-around;
     align-items: center;
+}
+.btn-yes {
+    color: #fff;
+    background: #10595f;
+   &:hover{
+        box-shadow: 1px 1px 3px #123d60;
+   }
+}
+.btn-no {
+    background: #10595f;
+    color: #fff;
+   &:hover{
+        box-shadow: 1px 1px 3px #123d60;
+   }
 }
 </style>

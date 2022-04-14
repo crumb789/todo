@@ -50,7 +50,7 @@
 			{{placeholder}}
 		</div>
 		
-		<todo-list v-if="selectedTask">
+		<todo-list v-if="selectedTask && listTask.length > 0">
 
 
 			
@@ -190,6 +190,7 @@ export default {
 		if (localStorage.todoArray ) {
         this.todoArray = JSON.parse(localStorage.todoArray)
       }
+		
 	},
 
 }
