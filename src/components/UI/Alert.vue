@@ -40,12 +40,14 @@ export default {
 //     z-index: 12;
 // }
 .alert{
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     // font-size: 43px;
     padding: 10px 15px;
-    top: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 280px;
     height: 130px;
     background: #0b8b5c;

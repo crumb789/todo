@@ -1,5 +1,6 @@
 <template>
-    <div class="task">
+    <div class="task" 
+        :class="{menuActive: menuShow}">
         <slot></slot>
     </div>
 </template>
@@ -7,6 +8,12 @@
 <script>
 export default {
     name:'list-task',
+    props: {
+        menuShow:{
+            type: Boolean,
+            required: true
+        }
+    },
     data() {
         return{
 
@@ -28,5 +35,13 @@ export default {
     // &:hover{
     //     overflow: scroll;
     // }
+}
+.menuActive{
+    display: block;
+    position: fixed;
+    z-index: 20;
+    background: #11405f;
+    border: 2px solid #000;
+    width: 520px;
 }
 </style>

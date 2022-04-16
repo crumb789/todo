@@ -54,4 +54,7 @@ html{
 	background-image: linear-gradient(to left, #0b8b5c, #123c60);
 
 }
+
+
+
 </style>

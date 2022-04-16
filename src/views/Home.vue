@@ -2,12 +2,20 @@
   <div class="container">
     <nav>
       <h1>todo list</h1>
-
+		<div class="menu" @click="menuShow = !menuShow"  title="Все заметки"
+			:class="{activeMenu: menuShow === true}">
+			<div class="block_1" 
+				:class="{activeBox1: menuShow === true}"></div>
+			<div class="block_2" 
+				:class="{activeBox2: menuShow === true}"></div>
+			<div class="block_3" 
+				:class="{activeBox3: menuShow === true}"></div>
+		</div>
     </nav>
 
 	<div class="content">
 
-		<list>
+		<list :menuShow="menuShow">
 			<div class="task-form" v-if="!taskForm">
 				Задачи 
 				<div class="task-plus" @click="taskForm = !taskForm" title="Добавить задачу">
@@ -55,6 +63,7 @@
 
 			
 				<enter-todo 
+					:menuShow="menuShow"
 					:selectedTask="selectedTask"
 					:todoArray="todoArray"
 					@submit-newTodo="newToCreate" >
@@ -63,7 +72,7 @@
 			
 
 			<todo-item 
-				v-for="item in todoArray" 
+				v-for="item in todoArray.slice().reverse()" 
 				:key="item.id"
 				:item="item"
 				:selectedTask="selectedTask"
@@ -117,7 +126,8 @@ export default {
 			selectedTask: undefined,
 			placeholder: 'Выбери задачу',
 			taskForm: false,
-			task: ''
+			task: '',
+			menuShow: false
 		}
 	},
 	methods: {
@@ -235,7 +245,7 @@ export default {
     border: 1px solid #000;
     border-radius: 10px;
     box-shadow: 3px 3px 0px #10525f, 0px -1px 5px #0d765d;
-	padding: 50px 0 0 0;
+	padding: 50px 0 50px 0;
 }
 
 .task-form{
@@ -250,6 +260,49 @@ export default {
 		fill: #0b8a5c;
 	}
 }
+.menu{
+    position: fixed;
+    display: none;
+    justify-content: space-between;
+    top: 45px;
+    width: 45px;
+    height: 25px;
+    flex-direction: column;
+	z-index: 10;
+}
+.block_1{
+    background: #fff;
+    width: 45px;
+    height: 3px;box-shadow: 3px 3px 3px #0f555e;
+	transition: 0.7s all;
+	&.activeBox1{
+		transform: rotateZ(-40deg);
+		width: 30px;
+		background: #0b8a5c;
+	}
+}
+.block_2{
+    background: #fff;
+    width: 35px;
+    height: 3px;box-shadow: 3px 3px 3px #0f555e;
+	transition: 0.7s all;
+	&.activeBox2{
+		transform: translateX(2px);
+		width: 45px;
+		background: #0b8a5c;
+	}
+}
+.block_3{
+    background: #fff;
+    width: 45px;
+    height: 3px;box-shadow: 3px 3px 3px #0f555e;
+	transition: 0.7s all;
+	&.activeBox3{
+		transform: rotateZ(40deg);
+		width: 30px;
+		background: #0b8a5c;
+	}
+}
 
 input{
 	border: none;
@@ -257,5 +310,15 @@ input{
 	background: #0b8a5c;
 	padding: 0 10px;
 	color: #fff;
+}
+::-webkit-scrollbar {
+    width: 4px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: #113c60;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #0c7e5d;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #113c60;
 }
 </style>

@@ -1,0 +1,105 @@
+@media(max-width: 1024px){
+	html{
+		width: 1140px;
+	}
+    h1{
+        font-size: 50px;
+    }
+    .task-form{
+        font-size: 35px;
+    }
+    .task-item{
+        font-size: 25px;
+    }
+    .placeholder{
+        font-size: 35px;
+    }
+    .todo-btn{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .item{
+        font-size: 22px;
+    }
+    input{
+        font-size: 20px;
+    }
+}
+@media(max-width: 767px){
+	html{
+		width: 1140px;
+	}
+	.content{
+	display: grid;
+	min-height: 500px;
+	grid-template-rows: 0.5fr 1fr;
+	grid-template-columns: 1fr;
+	row-gap: 5px;
+	}
+    .item{
+        font-size: 30px;
+    }
+	.task{
+		height: 300px;
+		overflow: auto;
+        display: none;
+	}
+	.task-form{
+		justify-content: center;
+	}
+	.check{
+		border: 2px solid #0b8a5c;
+	}
+    .task-plus{
+        svg{
+            height: 35px;
+            width: 35px;
+        }
+    }
+    .input-task{
+        justify-content: center;
+        column-gap: 10px;
+        height: 40px;
+        input{
+            height: 40px;
+        }
+    }
+    .task-btn{
+        margin-left: 15px;
+        height: 40px;
+        width: 40px;
+    }
+    .input-todo{
+        height: 40px;
+        input{
+            height: 40px;
+        }
+        svg{
+            height: 40px;
+            width: 40px;
+        }
+    }
+    .input-close{
+        height: 40px;
+        width: 40px;
+        background: #113c60;
+    }
+    .menu{
+        display: flex;
+    }
+    .list{
+        padding: 50px;
+    }
+    .alert{
+        width: 420px;
+        height: 200px;
+        &-btn{
+            button{
+                height: 50px;
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+
