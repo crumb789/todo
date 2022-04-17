@@ -6,7 +6,7 @@
         font-size: 50px;
     }
     .container{
-        max-width: 100%;
+        width: 980px;
     }
     .task-form{
         font-size: 30px;
@@ -39,7 +39,7 @@
 		width: 768px;
 	}
     .container{
-        max-width: 100%;
+        width: 740px;
     }
 	.content{
 	display: grid;
@@ -122,11 +122,11 @@
 
 @media (max-width: 576px){
     html{
-        width: 575px;
+        width: 576px;
     }
     .container{
-        max-width: 100%;
-    } 
+       width: 540px;
+    }
     .item{
         font-size: 18px;
         padding: 5px 20px;
@@ -150,6 +150,28 @@
     }
 }
 
+@media(max-width: 414px){
+    html{
+        width: 414px;
+    }
+    .container{
+        width: 400px;
+    }
+    .menu{
+        left: 10px;
+    }
+    .task{
+        width: 340px;
+    }
+    .item{
+        width: 100%;
+    }
+    .input-todo{
+        input{
+            width: 160px;
+        }
+    }
+}
 
 
 
