@@ -6,7 +6,7 @@
         font-size: 50px;
     }
     .container{
-        width: 980px;
+        max-width: 100%;
     }
     .task-form{
         font-size: 30px;
@@ -39,7 +39,7 @@
 		width: 768px;
 	}
     .container{
-        width: 740px;
+        max-width: 100%;
     }
 	.content{
 	display: grid;
@@ -122,10 +122,10 @@
 
 @media (max-width: 576px){
     html{
-        width: 576px;
+        width: 575px;
     }
     .container{
-        width: 540px;
+        max-width: 100%;
     }
     .item{
         font-size: 18px;
