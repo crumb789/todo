@@ -1,25 +1,34 @@
 @media(max-width: 1024px){
 	html{
-		width: 1140px;
+		width: 1024px;
 	}
     h1{
         font-size: 50px;
     }
+    .container{
+        width: 980px;
+    }
     .task-form{
-        font-size: 35px;
+        font-size: 30px;
     }
     .task-item{
-        font-size: 25px;
+        font-size: 18px;
     }
     .placeholder{
-        font-size: 35px;
+        font-size: 30px;
     }
     .todo-btn{
         font-size: 25px;
         margin-bottom: 10px;
     }
     .item{
-        font-size: 22px;
+        font-size: 20px;
+    }
+    .input-task{
+        height: 30px;
+        input{
+            width: 180px;
+        }
     }
     input{
         font-size: 20px;
@@ -41,6 +50,9 @@
 	}
     .item{
         font-size: 30px;
+        &:hover{
+            border: 1px solid #ffffff85;
+        }
     }
 	.task{
 		height: 300px;
@@ -90,6 +102,9 @@
     .menu{
         display: flex;
     }
+    .menuActive{
+        width: 580px;
+    }
     .list{
         padding: 50px;
     }
@@ -104,5 +119,37 @@
         }
     }
 }
+
+@media (max-width: 576px){
+    html{
+        width: 576px;
+    }
+    .container{
+        width: 540px;
+    }
+    .item{
+        font-size: 18px;
+        padding: 5px 20px;
+    }
+    .input-todo{
+        position: relative;
+        input{
+            width: 200px;
+        }
+    }
+    .menuActive{
+        width: 482px;
+    }
+    .task-mobile{
+        position: absolute;
+        top: -82px;
+        right: 0;
+    }
+    .list{
+        padding: 50px 30px ;
+    }
+}
+
+
 
 

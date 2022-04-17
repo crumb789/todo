@@ -274,7 +274,7 @@ export default {
     background: #fff;
     width: 45px;
     height: 3px;box-shadow: 3px 3px 3px #0f555e;
-	transition: 0.7s all;
+	transition: 0.5s all;
 	&.activeBox1{
 		transform: rotateZ(-40deg);
 		width: 30px;
@@ -285,7 +285,7 @@ export default {
     background: #fff;
     width: 35px;
     height: 3px;box-shadow: 3px 3px 3px #0f555e;
-	transition: 0.7s all;
+	transition: 0.5s all;
 	&.activeBox2{
 		transform: translateX(2px);
 		width: 45px;
@@ -296,7 +296,7 @@ export default {
     background: #fff;
     width: 45px;
     height: 3px;box-shadow: 3px 3px 3px #0f555e;
-	transition: 0.7s all;
+	transition: 0.5s all;
 	&.activeBox3{
 		transform: rotateZ(40deg);
 		width: 30px;

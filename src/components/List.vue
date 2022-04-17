@@ -42,6 +42,5 @@ export default {
     z-index: 20;
     background: #11405f;
     border: 2px solid #000;
-    width: 520px;
 }
 </style>
